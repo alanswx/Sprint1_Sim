@@ -6,7 +6,7 @@ ENTITY sync_prom IS
 PORT
 (
 	address         : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-	clock           : IN STD_LOGIC  := '1';
+	clock           : IN STD_LOGIC  ;
 	q               : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
 );
 END sync_prom; 

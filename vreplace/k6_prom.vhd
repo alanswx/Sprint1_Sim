@@ -6,7 +6,7 @@ ENTITY k6_prom IS
 PORT
 (
 	address         : IN STD_LOGIC_VECTOR (8 DOWNTO 0);
-	clock           : IN STD_LOGIC  := '1';
+	clock           : IN STD_LOGIC  ;
 	q               : OUT STD_LOGIC_VECTOR (3 DOWNTO 0)
 );
 END k6_prom; 

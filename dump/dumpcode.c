@@ -66,7 +66,8 @@ void write_vhdl_prefix(FILE *out,char *name,int bitsq, int bitsa)
 	fprintf(out,"PORT\n");
         fprintf(out,"(\n");
         fprintf(out,"\taddress         : IN STD_LOGIC_VECTOR (%d DOWNTO 0);\n",bitsa-1);
-        fprintf(out,"\tclock           : IN STD_LOGIC  := '1';\n");
+        //fprintf(out,"\tclock           : IN STD_LOGIC  := '1';\n");
+        fprintf(out,"\tclock           : IN STD_LOGIC  ;\n");
         fprintf(out,"\tq               : OUT STD_LOGIC_VECTOR (%d DOWNTO 0)\n",bitsq-1);
         fprintf(out,");\n");
 	fprintf(out,"END %s; \n",name);

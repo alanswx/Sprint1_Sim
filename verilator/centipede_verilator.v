@@ -21,7 +21,41 @@ module centipede_verilator;
    reg [7:0]  sw1/*verilator public_flat*/;
    reg [7:0]  sw2/*verilator public_flat*/;
    reg [9:0]  playerinput/*verilator public_flat*/;
-  
+
+SPRINT1 SPRINT1(
+	.Clk_50_I(CLK_50M),
+	.Reset_n(~(RESET | status[0] | buttons[1] | ioctl_download)),
+
+	.dn_addr(ioctl_addr[16:0]),
+	.dn_data(ioctl_data),
+	.dn_wr(ioctl_wr),
+
+	.VideoW_O(videowht),
+	.VideoB_O(videoblk),
+
+	.Sync_O(compositesync),
+	.Audio1_O(audio),
+	.Coin1_I(~(m_coin|btn_coin_1)),
+	.Coin2_I(~(m_coin|btn_coin_2)),
+	.Start_I(~(m_start1|btn_start_1)),
+	.Gas_I(~m_gas),
+	.Gear1_I(gear1),
+	.Gear2_I(gear2),
+	.Gear3_I(gear3),
+	.gear_shift(gear),
+	.Test_I	(~status[13]),
+	.SteerA_I(steer[1]),
+	.SteerB_I(steer[0]),
+	.StartLamp_O(lamp),
+	.hs_O(hs),
+	.vs_O(vs),
+	.hblank_O(hblank),
+	.vblank_O(vblank),
+	.clk_12(clk_12),
+	.clk_6_O(CLK_VIDEO_2),
+	.SW1_I(SW1)
+	);
+			  
 /* 
    centipede uut(
 		 .clk_12mhz(clk),

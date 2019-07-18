@@ -15,7 +15,7 @@ INC = +incdir+$(RTL) +incdir+$(CPU) +incdir+$(ROM)
 DEFINE = +define+debug=1 +define+SIMULATION=1 
 LDFLAGS = "-L../../sim/lib6502 -lSDL2 -lpthread -l6502"
 EXE = ./tmp/Vcentipede_verilator
-OPT = -O2 
+OPT = -O2  --debugi 9  
 CFLAGS = "-O -DCOSIM=0 -I../../emu/famec"
 
 #V_SRC = \
@@ -27,8 +27,9 @@ CFLAGS = "-O -DCOSIM=0 -I../../emu/famec"
 #	$(RTL)/vprom.v $(RTL)/hs_ram.v
 
 
-#V_SRC = \
-#	../roms/Altera/Char_LSB.vhd 
+A_SRC = \
+	$(RTL)/sprint1.vhd \
+	centipede_verilator.v 
 
 V_SRC = \
 	../vreplace/Char_LSB.vhd \
@@ -40,7 +41,7 @@ V_SRC = \
 	../vreplace/prog_rom2.vhd \
 	../vreplace/prog_rom3.vhd \
 	../vreplace/prog_rom4.vhd \
-	../vreplace/ram.v \
+	../vreplace/ram1k.vhd \
 	../vreplace/sync_prom.vhd \
 	$(RTL)/T65/T65_Pack.vhd  \
 	$(RTL)/T65/T65_MCode.vhd \
