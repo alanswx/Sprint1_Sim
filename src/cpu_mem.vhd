@@ -264,21 +264,21 @@ end process;
 -- RAM 
 -- The original hardware multiplexes access to the RAM between the CPU and video hardware. In the FPGA it's
 -- easier to use dual-ported RAM
-RAM: entity work.ram1k_dp
-port map(
-	clock => clk6,
+--RAM: entity work.ram1k_dp
+--port map(
+--	clock => clk6,
 -- CPU side	
-	address_a => adr(9 downto 0),
-	wren_a => ram_we,
-	data_a => DBUS_n,
-	q_a=> CPUram_dout,
+--	address_a => adr(9 downto 0),
+--	wren_a => ram_we,
+--	data_a => DBUS_n,
+--	q_a=> CPUram_dout,
 
 -- Video side
-	address_b => Vram_addr,
-	wren_b => '0',
-	data_b => x"FF",
-	q_b => Vram_dout
-	);
+--	address_b => Vram_addr,
+--	wren_b => '0',
+--	data_b => x"FF",
+--	q_b => Vram_dout
+--	);
 
 Vram_addr <= (V128 or H256_n) & (V64 or H256_n) & (V32 or H256_n) & (V16 and H256) & 	(V8 and H256) & H128 & H64 & H32 & H16 & H8;
 

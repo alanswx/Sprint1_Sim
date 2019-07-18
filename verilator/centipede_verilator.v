@@ -21,7 +21,8 @@ module centipede_verilator;
    reg [7:0]  sw1/*verilator public_flat*/;
    reg [7:0]  sw2/*verilator public_flat*/;
    reg [9:0]  playerinput/*verilator public_flat*/;
-   
+  
+/* 
    centipede uut(
 		 .clk_12mhz(clk),
  		 .reset(reset),
@@ -40,7 +41,7 @@ module centipede_verilator;
 		 .audio_o(audio),
 		.clk_6mhz_o()
 		 );
-
+*/
 `ifdef SDL_DISPLAY
    import "DPI-C" function void dpi_vga_init(input integer h,
 					     input integer v);

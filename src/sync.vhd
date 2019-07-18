@@ -37,6 +37,7 @@ end synchronizer;
 architecture rtl of synchronizer is
 
 signal h_counter		: std_logic_vector(9 downto 0) := (others => '0');
+
 signal H256				: std_logic;
 signal H256_n			: std_logic;
 signal H128				: std_logic;

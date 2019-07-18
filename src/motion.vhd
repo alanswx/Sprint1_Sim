@@ -40,6 +40,7 @@ end motion;
 
 architecture rtl of motion is
 
+
 signal phi0			: std_logic;
 
 signal LDH1_n		: std_logic;

@@ -41,6 +41,7 @@ end playfield;
 
 architecture rtl of playfield is
 
+
 signal H1				: std_logic;
 signal H2				: std_logic;
 signal H4				: std_logic;
@@ -70,6 +71,8 @@ signal A6_3				: std_logic;
 signal DISPLAY_7                : std_logic;
 signal gear_shift		: std_logic_vector(1 downto 0) := (others => '0');
 signal num : std_logic_vector(5 downto 0) := (others => '0');
+
+
 begin
 
 -- Video synchronization signals

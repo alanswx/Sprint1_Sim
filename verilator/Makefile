@@ -26,18 +26,22 @@ CFLAGS = "-O -DCOSIM=0 -I../../emu/famec"
 #	$(RTL)/pf_ram_dp.v \
 #	$(RTL)/vprom.v $(RTL)/hs_ram.v
 
+
+#V_SRC = \
+#	../roms/Altera/Char_LSB.vhd 
+
 V_SRC = \
-	centipede_verilator.v \
-	../roms/Altera/Char_LSB.vhd \
-	../roms/Altera/Char_MSB.vhd \
-	../roms/Altera/addec_prom.vhd \
-	../roms/Altera/j6_prom.vhd \
-	../roms/Altera/k6_prom.vhd \
-	../roms/Altera/prog_rom1.vhd \
-	../roms/Altera/prog_rom2.vhd \
-	../roms/Altera/prog_rom3.vhd \
-	../roms/Altera/prog_rom4.vhd \
-	../roms/Altera/sync_prom.vhd \
+	../vreplace/Char_LSB.vhd \
+	../vreplace/Char_MSB.vhd \
+	../vreplace/addec_prom.vhd \
+	../vreplace/j6_prom.vhd \
+	../vreplace/k6_prom.vhd \
+	../vreplace/prog_rom1.vhd \
+	../vreplace/prog_rom2.vhd \
+	../vreplace/prog_rom3.vhd \
+	../vreplace/prog_rom4.vhd \
+	../vreplace/ram.v \
+	../vreplace/sync_prom.vhd \
 	$(RTL)/T65/T65_Pack.vhd  \
 	$(RTL)/T65/T65_MCode.vhd \
 	$(RTL)/T65/T65_ALU.vhd \
@@ -45,7 +49,6 @@ V_SRC = \
 	$(RTL)/EngineSound.vhd \
 	$(RTL)/Inputs.vhd \
 	$(RTL)/collision.vhd \
-	$(RTL)/Altera/ram1k_dp.vhd \
 	$(RTL)/cpu_mem.vhd \
 	$(RTL)/deltasigma.vhd \
 	$(RTL)/gearshift.vhd \
@@ -55,8 +58,8 @@ V_SRC = \
 	$(RTL)/sync.vhd \
 	$(RTL)/sprint1.vhd \
 	$(RTL)/sprint1_sound.vhd \
-	$(RTL)/Altera/clk_pll.vhd \
-	$(RTL)/sprint1.vhd  
+	$(RTL)/sprint1.vhd   \
+	centipede_verilator.v 
 
 C_SRC = \
 	centipede_verilator.cpp vga.cpp cosim.cpp

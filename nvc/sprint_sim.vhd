@@ -13,13 +13,13 @@ use ieee.numeric_std.all;
     END top;
 
     ARCHITECTURE behavior OF top IS 
-      COMPONENT top  
-      PORT(
-        clk_in : IN  std_logic;
-        reset  : IN  std_logic;
-        clk_out: OUT std_logic
-      );
-      END COMPONENT;
+      --COMPONENT top  
+      --PORT(
+      --  clk_in : IN  std_logic;
+      --  reset  : IN  std_logic;
+      --  clk_out: OUT std_logic
+      --);
+      --END COMPONENT;
 
       -- Inputs
       signal clk_in  : std_logic := '0';

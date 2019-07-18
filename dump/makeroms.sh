@@ -8,3 +8,6 @@
 ./dumpcode 6442-01.d1 prog_rom3 8
 ./dumpcode 6443-01.e1 prog_rom4 8
 ./dumpcode 6400-01.m2 sync_prom 4
+
+mv *.v ../vreplace/
+mv *.vhd ../vreplace/
