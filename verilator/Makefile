@@ -41,7 +41,7 @@ V_SRC = \
 	../vreplace/prog_rom2.vhd \
 	../vreplace/prog_rom3.vhd \
 	../vreplace/prog_rom4.vhd \
-	../vreplace/ram1k.vhd \
+	../vreplace/ram1k.v \
 	../vreplace/sync_prom.vhd \
 	$(RTL)/T65/T65_Pack.vhd  \
 	$(RTL)/T65/T65_MCode.vhd \
