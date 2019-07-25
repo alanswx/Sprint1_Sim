@@ -987,7 +987,8 @@ begin
 					-- TYA
 					ALU_Op <= "1101";
 				when others =>
-					ALU_Op <= "----";
+					-- AJS -- ALU_Op <= "----";
+					ALU_Op <= "0000";
 				end case;
 			when others =>
 				case IR(7 downto 5) is

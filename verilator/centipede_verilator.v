@@ -4,7 +4,7 @@
 
 `timescale 1ns/1ns
 
-`define SDL_DISPLAY
+`define SDL_DISPLAY 1
 
 module centipede_verilator;
 

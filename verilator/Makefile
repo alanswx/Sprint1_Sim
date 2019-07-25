@@ -15,7 +15,8 @@ INC = +incdir+$(RTL) +incdir+$(CPU) +incdir+$(ROM)
 DEFINE = +define+debug=1 +define+SIMULATION=1 
 LDFLAGS = "-L../../sim/lib6502 -lSDL2 -lpthread -l6502"
 EXE = ./tmp/Vcentipede_verilator
-OPT = -O2  --debugi 9  
+#OPT = -O2  --debugi 9  
+OPT = -O2  
 CFLAGS = "-O -DCOSIM=0 -I../../emu/famec"
 
 #V_SRC = \

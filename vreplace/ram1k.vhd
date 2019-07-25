@@ -25,13 +25,13 @@ ARCHITECTURE SYN OF ram1k_dp IS
 	-- Build a 2-D array type for the RAM
 
 
-	--subtype word_t is std_logic_vector(7 downto 0);
-	--type memory_t is array(1023 downto 0) of word_t;
+	subtype word_t is std_logic_vector(7 downto 0);
+	type memory_t is array(1023 downto 0) of word_t;
 	-- Declare the RAM
-	--shared variable ram : memory_t;
-	-- Declare the RAM
-	type memory_t is array(1023 downto 0) of std_logic_vector(7 downto 0);
 	shared variable ram : memory_t;
+	-- Declare the RAM
+	--type memory_t is array(1023 downto 0) of std_logic_vector(7 downto 0);
+	--shared variable ram : memory_t;
 
 begin
 

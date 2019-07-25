@@ -5,18 +5,6 @@
 // Coder       : Deepak Kumar Tala
 //-----------------------------------------------------
 module ram1k(
-                address_a               : IN STD_LOGIC_VECTOR (9 DOWNTO 0);
-                address_b               : IN STD_LOGIC_VECTOR (9 DOWNTO 0);
-                --clock         : IN STD_LOGIC  := '1';
-                clock           : IN STD_LOGIC  ;
-                data_a          : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-                data_b          : IN STD_LOGIC_VECTOR (7 DOWNTO 0);
-                --wren_a                : IN STD_LOGIC  := '0';
-                --wren_b                : IN STD_LOGIC  := '0';
-                wren_a          : IN STD_LOGIC  ;
-                wren_b          : IN STD_LOGIC  ;
-                q_a             : OUT STD_LOGIC_VECTOR (7 DOWNTO 0);
-                q_b             : OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
 clock       , // Clock Input
 address_a , // address_a Input
 data_a    , // data_a bi-directional
